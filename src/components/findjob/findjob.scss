@@ -1,0 +1,109 @@
+.findjob {
+    padding: 80px 0px;
+    background: rgb(245, 250, 253);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-size: 54px;
+            font-weight: 500;
+        }
+
+        button {
+            width: 140px;
+            height: 40px;
+            border: 1px solid transparent;
+            background: rgb(34, 176, 252);
+            color: #fff;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+    }
+
+    &__card {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+    &__card-top {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        gap: 10px;
+
+        &__p {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            p:last-child {
+                border-radius: 5px;
+                padding: 5px;
+                background: rgba(15, 188, 73, 0.1);
+                color: green;
+            }
+        }
+    }
+
+    &__card-title {
+        margin-bottom: 40px;
+    }
+
+    &__card-bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .findjob__title h1 {
+        font-size: 38px;
+    }
+
+    .findjob__cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .findjob__cards {
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width: 530px) {
+    .findjob__card-title h3{
+        font-size: 16px;
+    }
+
+    .findjob__card-top {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .findjob__cards {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
